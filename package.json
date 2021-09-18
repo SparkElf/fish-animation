@@ -1,7 +1,7 @@
 {
   "name": "fish-animation",
   "version": "1.0.0",
-  "description": "a fish animation write by typescript",
+  "description": "An react component of fish animation which is used in the form of ES6 module",
   "main": "fish-animation.ts",
   "author": "forestlightelf",
   "license": "MIT",
