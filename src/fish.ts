@@ -1,4 +1,4 @@
-import { app } from "./main"
+
 import { Renderer } from "./renderer"
 /**
  *  鱼水平方向匀速运动 竖直方向 水下加速度向上 水上和重力加速度叠加后合加速度向下
@@ -16,13 +16,15 @@ export class Fish {
     hadOut: boolean//已经出水过
     theta: number//鱼鳍转动脚
     phi: number//鱼尾摆动角
-    constructor() {
+    app: Renderer
+    constructor(app: Renderer) {
+        this.app = app;//Renderer不能做成全局的，只能够注入
         this.init()
     }
     init() {
         this.direction = Math.random() < 0.5
-        this.x = this.direction ? (app.width + Renderer.THRESHOLD) : - Renderer.THRESHOLD;//屏幕外一个THRESHOLD的距离
-        this.y = this.getRandomValue(app.height * 0.6, app.height * 0.9)//0.6-0.9 比水底略高 水面略低
+        this.x = this.direction ? (this.app.width + Renderer.THRESHOLD) : - Renderer.THRESHOLD;//屏幕外一个THRESHOLD的距离
+        this.y = this.getRandomValue(this.app.height * 0.6, this.app.height * 0.9)//0.6-0.9 比水底略高 水面略低
         this.previousY = this.y;
         this.vx = this.getRandomValue(4, 10) * (this.direction ? -1 : 1)
         this.vy = this.getRandomValue(-5, -2)//速度向上
@@ -43,16 +45,16 @@ export class Fish {
         this.theta %= Math.PI * 2;
         this.phi += Math.PI / 30;//6度 60帧一圈
         this.phi %= Math.PI * 2;
-        if (this.y < app.getSurfaceHeight()) {
+        if (this.y < this.app.getSurfaceHeight()) {
             this.vy += Fish.GRAVITY;
             this.hadOut = true;
         } else if (this.hadOut) {
             this.ay = this.getRandomValue(-0.2, -0.05);//重新入水时重新分配初始加速度
             this.hadOut = false;
         }
-        app.generateEpicenter(this.x + (this.direction ? -30 : 30)/**视觉效果修正项 */, this.y, this.y - this.previousY);//TODO 尝试用vy代替
+        this.app.generateEpicenter(this.x + (this.direction ? -30 : 30)/**视觉效果修正项 */, this.y, this.y - this.previousY);//TODO 尝试用vy代替
 
-        if ((this.vx > 0 && this.x > app.width + Renderer.THRESHOLD) || (this.vx < 0 && this.x < -Renderer.THRESHOLD)) {
+        if ((this.vx > 0 && this.x > this.app.width + Renderer.THRESHOLD) || (this.vx < 0 && this.x < -Renderer.THRESHOLD)) {
             this.init();
         }
     }

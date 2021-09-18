@@ -132,7 +132,7 @@ export class Renderer {
         if (this.fishes.length < this.fishCount) {
             if (--this.addFishIntervalCount === 0) {
                 this.addFishIntervalCount = 40;
-                this.fishes.push(new Fish());
+                this.fishes.push(new Fish(this));
             }
         }
     }

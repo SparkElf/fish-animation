@@ -1,5 +1,5 @@
-import React from "react"
-import { app } from "./main"
+import React, { useState } from "react"
+import { Renderer } from "./renderer"
 var containerCSS = {
     width: '100%',
     height: '50%',
@@ -9,6 +9,7 @@ var containerCSS = {
     backgroundColor: '#FFFFFF',
 }
 export const FishAnimation = (props) => {
+    const [app,] = React.useState(new Renderer())
     React.useEffect(() => {
         app.launch()
     }, [])
