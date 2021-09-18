@@ -1,6 +1,6 @@
 {
   "name": "@forestlightelf/fish-animation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An react component of fish animation which is used in the form of ES6 module",
   "main": "./build/fish-animation.js",
   "author": "forestlightelf",
