@@ -1,5 +1,5 @@
 {
-  "name": "@forestlightelf/fish-animation",
+  "name": "@forestlightelf/fish-animation-react",
   "version": "1.0.0",
   "description": "An react component of fish animation which is used in the form of ES6 module",
   "main": "./build/fish-animation.js",
