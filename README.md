@@ -2,7 +2,7 @@
 
 ## :star2: Demo
 
-![](/home/forestlightelf/图片/2021-09-18 12-37-01 的屏幕截图.png)
+![](readmeImg/2021-09-18 12-37-01 的屏幕截图.png)
 
 ##  :package: Install
 
@@ -32,4 +32,4 @@ const App=(props)=>{
 
 ​	If you love this project, thanks to buy me a coffee (or more likely a beer)!
 
-![](/home/forestlightelf/下载/code.png)
+![](readmeImg/code.png)
