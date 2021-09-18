@@ -2,7 +2,7 @@
 
 ## :star2: Demo
 
-![](readmeImg/show.png)
+![](https://github.com/forestlightelf/picture-store/blob/master/show.png)
 
 ##  :package: Install
 
@@ -32,4 +32,4 @@ const App=(props)=>{
 
 ​	If you love this project, thanks to buy me a coffee (or more likely a beer)!
 
-![](readmeImg/code.png)
+![](https://github.com/forestlightelf/picture-store/blob/master/code.png)
