@@ -10,7 +10,7 @@
 
 ```shell
 # yarn
-yarn add @forestlightelf/fish-animation
+yarn add @forestlightelf/fish-animation-react
 # build it your self(you shold know something about rollup and typescript)
 rollup -c
 ```
