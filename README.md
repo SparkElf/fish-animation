@@ -2,7 +2,7 @@
 
 ## :star2: Demo
 
-![](readmeImg/2021-09-18 12-37-01 的屏幕截图.png)
+![](readmeImg/show.png)
 
 ##  :package: Install
 
